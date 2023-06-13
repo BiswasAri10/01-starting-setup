@@ -2,10 +2,10 @@ import "./ExpenseItem.css";
 
 function ExpenseDetails(props) {
   return (
-    <div className="expense-details">
-      <div className="expense-details__title">{props.title}</div>
-      <div className="expense-details__amount">Rs.{props.amount}</div>
-      <div className="expense-details__location">{props.location}</div> 
+    <div className="expense-item__description">
+      <div className="expense-item__title">{props.title}</div>
+      <div className="expense-item__location">{props.location}</div> 
+      <div className="expense-item__price">Rs.{props.amount}</div>
     </div>
   );
 }
