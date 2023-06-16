@@ -5,6 +5,9 @@ import "./ExpenseItem.css";
 import Card from "../UI/Card";
 
 function ExpenseItem(props) {
+  const clickHandler = () => {
+    console.log('clicked!!!');
+  };
   /*return React.createElement(
     Card,
     { className: 'expense-item' },
@@ -23,6 +26,7 @@ function ExpenseItem(props) {
         amount={props.amount}
         location={props.location}
       />
+      <button onClick={clickHandler}>Delete</button>
     </Card>
   );
 }
