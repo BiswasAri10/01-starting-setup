@@ -5,11 +5,11 @@ import "./ExpenseItem.css";
 import Card from "../UI/Card";
 
 function ExpenseItem(props) {
-  const [amount, setAmount] = useState(props.amount);
+  /*const [amount, setAmount] = useState(props.amount);
   const clickHandler = () => {
     setAmount('100')
     console.log(amount);
-  };
+  };*/
   /*return React.createElement(
     Card,
     { className: 'expense-item' },
@@ -25,10 +25,10 @@ function ExpenseItem(props) {
       <ExpenseDate date={props.date} />
       <ExpenseDetails
         title={props.title}
-        amount={amount}
+        amount={props.amount}
         location={props.location}
       />
-      <button onClick={clickHandler}>Delete</button>
+      {/* <button onClick={clickHandler}>Delete</button> */}
     </Card>
   );
 }
