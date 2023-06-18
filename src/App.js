@@ -33,6 +33,13 @@ const App = () => {
       location: "Chadni Chowk",
     },
   ];
+
+
+const addExpenseHandler = expense => {
+console.log('In App.js');
+console.log(expense);
+};
+
   /*return React.createElement(
     'div', 
     {}, 
@@ -42,7 +49,7 @@ const App = () => {
 
   return (
     <div>
-      <NewExpense></NewExpense>
+      <NewExpense onAddExpense={addExpenseHandler}></NewExpense>
       <Expenses items={expenses} />
     </div>
   );
