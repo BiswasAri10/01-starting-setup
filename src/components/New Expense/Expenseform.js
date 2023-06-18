@@ -3,7 +3,7 @@ import "./Expenseform.css";
 
 const ExpenseForm = () => {
   const [enteredTitle, setenteredTitle] = useState("");
-  const [enterenAmount, setenteredAmount] = useState("");
+  const [enteredAmount, setenteredAmount] = useState("");
   const [enteredDate, setenteredDate] = useState("");
   /*const [userInput, setuserInput] = useState({
     enteredTitle: "",
@@ -37,8 +37,18 @@ const ExpenseForm = () => {
     })*/
   };
 
+  const submitHandler = (event) => {
+    event.preventDefault();
+    const expensedata = {
+      title: enteredTitle,
+      amount: enteredAmount,
+      date: new Date(enteredDate)
+    };
+    console.log(expensedata);
+  };
+
   return (
-    <form>
+    <form onSubmit={submitHandler}>
       <div className="new-expense__controls">
         <div className="new-expense__control">
           <label>Title</label>
