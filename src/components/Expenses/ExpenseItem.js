@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import ExpenseDate from "./ExpenseDate";
 import ExpenseDetails from "./ExpenseDetails";
 import "./ExpenseItem.css";
@@ -20,7 +20,7 @@ function ExpenseItem(props) {
       location: props.location,
     })
   );*/
-  return (
+  return ( <li>
     <Card className="expense-item">
       <ExpenseDate date={props.date} />
       <ExpenseDetails
@@ -30,6 +30,8 @@ function ExpenseItem(props) {
       />
       {/* <button onClick={clickHandler}>Delete</button> */}
     </Card>
+  </li>
+    
   );
 }
 export default ExpenseItem;
